@@ -1,0 +1,51 @@
+
+<section class="login-registro">
+
+  <div class="loginregisterclass" v-show="!this.props_blIsLoggedIn">
+
+    <div class="plogin" v-show="blLoginVisible">
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Escriba su Email" name="email" v-model="lEmail">
+
+      <label for="psw"><b>Contraseña</b></label>
+      <input type="password" placeholder="Escriba su Contraseña" name="psw" v-model="lPass">
+
+      <button v-on:click="clickDeBotonLogin" >Login</button>
+      <button class="botonL" v-on:click="LoginGoogle" >Google</button>
+
+      <button class="botonL" v-on:click="LoginTwitter" >Twitter</button>
+      <button type="submit" v-on:click="btnRegistrar1">Registro</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+
+    </div>
+    <div class="plogin" v-show="!blLoginVisible">
+     <label for="uname"><b>Email</b></label>
+     <input type="text" placeholder="Escriba su Email" name="email" v-model="sEmail">
+
+     <label for="psw"><b>Usuario</b></label>
+     <input type="text" placeholder="Escriba su Usuario" name="uname" v-model="sUser">
+
+     <label for="uname"><b>Contraseña</b></label>
+     <input type="password" placeholder="Escriba su Contraseña" name="psw" v-model="sPass">
+
+     <label for="psw"><b>Repita contraseña</b></label>
+     <input type="password" placeholder="Reescriba su contraseña" name="repsw" v-model="sRePass">
+
+
+     <button v-on:click="clickDeBotonAceptarRegistro">Registro</button>
+     <button  v-on:click="btnCancelar">Cancelar</button>
+
+    </div>
+
+  </div>
+  <div class="logged" v-show="this.props_blIsLoggedIn" >
+     <button  v-on:click="logout">Logout</button>
+
+  </div>
+
+
+</section>
