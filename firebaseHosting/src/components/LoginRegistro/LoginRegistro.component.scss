@@ -1,9 +1,10 @@
 section{
-  font-family:serif;
+  font-family:Andale Mono, monospace;
 }
 
 .login-registro {
-background-color: aquamarine;
+background-color: CornFlowerBlue;
+border: 5px solid Blue;
 width: 40%;
 margin: auto;
 border-radius: 10px;
@@ -14,13 +15,22 @@ border-radius: 10px;
       display: inline-block;
       border: 1px solid #ccc;
       box-sizing: border-box;
+
   }
+
+label{
+  color: lavenderblush;
+
+}
+
+
 .botonL{
   width: 48%;
 }
   /* Set a style for all buttons */
   button {
-      background-color: #4CAF50;
+    font-family:Andale Mono, monospace;
+      background-color: darkblue;
       color: white;
       padding: 14px 20px;
       margin: 8px 0;
