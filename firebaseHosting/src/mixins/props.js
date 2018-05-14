@@ -17,6 +17,7 @@ setPerfil (id, datosPerfil){
   data(){
     return{
       props_blIsLoggedIn: false,
+      props_blInicioVisible: false,
       props_objuser:{},
       props_docperfil:{}
     }

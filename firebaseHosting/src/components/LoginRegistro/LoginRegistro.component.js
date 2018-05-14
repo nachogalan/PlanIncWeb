@@ -11,7 +11,6 @@ export default {
     return {
 
       blLoginVisible: true,
-      blInicioVisible: false,
       sUser:'',
       sEmail:'',
       sPass:'',
@@ -147,7 +146,7 @@ methods: {
     clickDeBotonLogin: function(event){
       firebase.auth().signInWithEmailAndPassword(this.lEmail, this.lPass).then(function(user){
       alert("Te has logeado!!! " +user.name);
-      this.blInicioVisible = true;
+
 
     },
 

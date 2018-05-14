@@ -19,6 +19,7 @@ export default {
   data () {
     return {
 perfiles:[]
+
     }
   },
   created: function() {
@@ -36,6 +37,7 @@ this.descargarPerfiles()
     });
   },
   methods: {
+
 descargarPerfiles: function(){
   var that=this
 /*firebase.firestore().collection("Perfiles").get().then(function(querySnapshot) {
@@ -53,7 +55,13 @@ that.perfiles = []
       that.perfiles.push(new Perfil(doc.id, doc.data()))
     });
 })
+},
+clickDeInicio: function (event){
+  this.props_blInicioVisible = true;
+  this.blLoggedUser= false;
+    EventBus.$emit('mostraInicio', this.props_blInicioVisible)
+},
 }
 
-  }
+
 }
